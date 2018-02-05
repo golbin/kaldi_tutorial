@@ -16,13 +16,13 @@
 kaldi=/home/kaldi
 # Source data: Where is your source (wavefile) data directory?
 SOURCE_PATH=./corpus/small_krs
-if [ "$#" -eq 1 ]; then
+if [ "$#" -ne 0 ]; then
     SOURCE_PATH=$1
 fi
 source=$SOURCE_PATH
 
 WORK_DIR=.
-if [ "$#" -eq 2 ]; then
+if [ "$#" -gt 1 ]; then
     WORK_DIR=$2
     mkdir -p $WORK_DIR
     mkdir -p $WORK_DIR/data
