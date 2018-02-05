@@ -20,6 +20,14 @@ if [ "$#" -eq 1 ]; then
     SOURCE_PATH=$1
 fi
 source=$SOURCE_PATH
+
+WORK_DIR=.
+if [ "$#" -eq 2 ]; then
+    WORK_DIR=$2
+    mkdir -p $WORK_DIR
+    mkdir -p $WORK_DIR/data
+fi
+work=$WORK_DIR
 # Log file: Log file will be saved with the name set below.
 logfile=1st_test
 log_dir=log
@@ -35,11 +43,14 @@ train_cmd=utils/run.pl
 decode_cmd=utils/run.pl
 
 ### Directories.
-train_dir=data/train
-test_dir=data/train
-lang_dir=data/lang
-dict_dir=data/local/dict
-log_dir=log
+train_dir=$work/data/train
+test_dir=$work/data/train
+lang_dir=$work/data/lang
+dict_dir=$work/data/local/dict
+log_dir=$work/log
+
+echo $train_dir
+exit
 
 ### Activation 
 ### Data: Give 1 to activate the following steps. Give 0 to deactivate the following steps.
