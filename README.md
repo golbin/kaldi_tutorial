@@ -1,4 +1,4 @@
-#Training Korean read-speech datasets
+# Training Korean read-speech datasets
 
 
 ### NOTICE
