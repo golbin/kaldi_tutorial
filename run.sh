@@ -49,9 +49,6 @@ lang_dir=$work/data/lang
 dict_dir=$work/data/local/dict
 log_dir=$work/log
 
-echo $train_dir
-exit
-
 ### Activation 
 ### Data: Give 1 to activate the following steps. Give 0 to deactivate the following steps.
 prepare_data=1
