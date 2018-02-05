@@ -15,7 +15,11 @@
 # Kaldi root: Where is your kaldi directory?
 kaldi=/home/kaldi
 # Source data: Where is your source (wavefile) data directory?
-source=./corpus/small_krs
+SOURCE_PATH=./corpus/small_krs
+if [ "$#" -eq 1 ]; then
+    SOURCE_PATH=$1
+fi
+source=$SOURCE_PATH
 # Log file: Log file will be saved with the name set below.
 logfile=1st_test
 log_dir=log
