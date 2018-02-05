@@ -27,7 +27,7 @@ You can run like this with your corpus dir
 $ bash run.sh /home/corpus/small_krs
 ```
 
-#### DEVELOPER
+### Author
 - Name: Hyungwon Yang
 - e-mail: hyung8758@gmail.com
 - NAMZ & EMCS Labs
